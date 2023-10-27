@@ -140,23 +140,6 @@ $.getJSON("src/firstnations.geojson", function (data){
   controlLayers.addOverlay(geoJsonLayer, 'First Nations');
 });
 
-// NFL Stadiums (Python Computed --> CSV to GeoJson)
-$.getJSON("src/nflstadiums.geojson", function (data){
-  var iconStyle = L.icon({
-    iconUrl: "src/nflstadiumlogo.png",
-    iconRetinaUrl: 'src/nflstadiumlogo.png',
-    iconSize: [12, 12]
-  });
-  var geoJsonLayer = L.geoJson(data, {
-    pointToLayer: function( feature, latlng) {
-      var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.Team); // replace with properties data label from your GeoJSON file if applicable
-      return marker;
-    }
-  }); // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'NFL Stadiums');
-});
-
 // Mining68 (Python Computed --> Shp to Geojson)
 $.getJSON("src/mining68.geojson", function (data){
   var iconStyle = L.icon({
