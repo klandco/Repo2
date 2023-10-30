@@ -79,7 +79,7 @@ $.getJSON("src/Airports464.geojson", function (data){
 
 
 //CMA Boundaries
-$.getJSON("src/CMABoundary.geojson", function (data) {   
+$.getJSON("src/NewJp2gProjectPolygons.geojson", function (data) {   
   var geoJsonLayer = L.geoJson(data, {
     style: function (feature) {
       return {
@@ -90,7 +90,7 @@ $.getJSON("src/CMABoundary.geojson", function (data) {
       }
     },
     onEachFeature: function( feature, layer) {
-      layer.bindPopup(feature.properties.CMA_NAME) // replace with properties data label from your GeoJSON file if applicable
+      layer.bindPopup(feature.properties.MUN_NAME) // replace with properties data label from your GeoJSON file if applicable
     }
   });  // insert ".addTo(map)" to display layer by default
   controlLayers.addOverlay(geoJsonLayer, 'CMA Boundary'); 
