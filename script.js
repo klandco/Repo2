@@ -93,7 +93,7 @@ $.getJSON("src/NewJp2gProjectPolygons.geojson", function (data) {
       layer.bindPopup(feature.properties.MUN_NAME) // replace with properties data label from your GeoJSON file if applicable
     }
   });  // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'CMA Boundary'); 
+  controlLayers.addOverlay(geoJsonLayer, 'Municipalities'); 
 });
 
 
