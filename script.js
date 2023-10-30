@@ -56,10 +56,10 @@ controlLayers.addBaseLayer(Esri_WorldImagery, 'Esri World Imagery');
 /* POINT OVERLAYS */
 
 // All Airports
-$.getJSON("src/Airports464.geojson", function (data){
+$.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
   var iconStyle = L.icon({
-    iconUrl: "src/airportlogo.png",
-    iconRetinaUrl: 'src/airportlogo.png',
+    iconUrl: "src/nflstadiumlogo.png",
+    iconRetinaUrl: 'src/nflstadiumlogo.png',
     iconSize: [18, 18]
   });
   var geoJsonLayer = L.geoJson(data, {
