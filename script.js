@@ -73,7 +73,7 @@ $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
 });
 
 // All Airports
-$.getJSON("src/Airports464.geojson", function (data){
+$.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
   var iconStyle = L.icon({
     iconUrl: "src/airportlogo.png",
     iconRetinaUrl: 'src/airportlogo.png',
