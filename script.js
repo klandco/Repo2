@@ -78,8 +78,8 @@ $.getJSON("src/Airports464.geojson", function (data){
 // Different options for styling and interactivity
 
 
-//CMA Boundaries
-$.getJSON("src/NewJp2gProjectPolygons.geojson", function (data) {   
+//Municipalities West
+$.getJSON("src/Jp2gProjectPolygonsWest.geojson", function (data) {   
   var geoJsonLayer = L.geoJson(data, {
     style: function (feature) {
       return {
@@ -93,7 +93,25 @@ $.getJSON("src/NewJp2gProjectPolygons.geojson", function (data) {
       layer.bindPopup(feature.properties.MUN_NAME) // replace with properties data label from your GeoJSON file if applicable
     }
   });  // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'Municipalities'); 
+  controlLayers.addOverlay(geoJsonLayer, 'Municipalities West'); 
+});
+
+//Municipalities East
+$.getJSON("src/Jp2gProjectPolygonsEast.geojson", function (data) {   
+  var geoJsonLayer = L.geoJson(data, {
+    style: function (feature) {
+      return {
+        'color': 'red',
+        'weight': 2,
+        'fillColor': '#fff',
+        'fillOpacity': 0
+      }
+    },
+    onEachFeature: function( feature, layer) {
+      layer.bindPopup(feature.properties.MUN_NAME) // replace with properties data label from your GeoJSON file if applicable
+    }
+  });  // insert ".addTo(map)" to display layer by default
+  controlLayers.addOverlay(geoJsonLayer, 'Municipalities East'); 
 });
 
 
