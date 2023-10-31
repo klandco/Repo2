@@ -60,7 +60,7 @@ $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
   var iconStyle = L.icon({
     iconUrl: "src/redcircle.png",
     iconRetinaUrl: 'src/redcircle.png',
-    iconSize: [2, 2]
+    iconSize: [0.5, 0.5]
   });
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
