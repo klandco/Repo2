@@ -60,16 +60,16 @@ $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
   var iconStyle = L.icon({
     iconUrl: "src/redcirle.png",
     iconRetinaUrl: 'src/redcirle.png',
-    iconSize: [10, 10]
+    iconSize: [30, 30]
   });
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.PLACE_NAME); // replace with properties data label from your GeoJSON file if applicable
+      marker.bindPopup(feature.properties.coordinates); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'Project Points');
+  controlLayers.addOverlay(geoJsonLayer, 'Project Points1');
 });
 
 
