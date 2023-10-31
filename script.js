@@ -1,4 +1,4 @@
-//UniversalSpatialDataMapper Javascript
+//UniversalSpatialDataMapper Javascript1
 
 // set up the map center and zoom level
 var map = L.map('map', {
