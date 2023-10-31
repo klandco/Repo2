@@ -2,7 +2,7 @@
 
 // set up the map center and zoom level
 var map = L.map('map', {
-  center: [42, -92],
+  center: [20, -92],
   zoom: 4, 
   zoomControl: false, 
   scrollWheelZoom: true
@@ -55,11 +55,11 @@ controlLayers.addBaseLayer(Esri_WorldImagery, 'Esri World Imagery');
 
 /* POINT OVERLAYS */
 
-// All Airports
+// All Project Points
 $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
   var iconStyle = L.icon({
-    iconUrl: "src/airportlogo.png",
-    iconRetinaUrl: 'src/airportlogo.png',
+    iconUrl: "src/redcircle.png",
+    iconRetinaUrl: 'src/redcircle.png',
     iconSize: [18, 18]
   });
   var geoJsonLayer = L.geoJson(data, {
@@ -69,7 +69,7 @@ $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'Points');
+  controlLayers.addOverlay(geoJsonLayer, 'Project Points');
 });
 
 
