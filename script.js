@@ -69,7 +69,7 @@ $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'Project Points1');
+  controlLayers.addOverlay(geoJsonLayer, 'Project Points New');
 });
 
 
@@ -93,7 +93,7 @@ $.getJSON("src/Jp2gProjectPolygonsWest.geojson", function (data) {
       layer.bindPopup(feature.properties.MUN_NAME) // replace with properties data label from your GeoJSON file if applicable
     }
   });  // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'Municipalities West'); 
+  controlLayers.addOverlay(geoJsonLayer, 'Municipalities West ThirtyOne'); 
 });
 
 //Municipalities East
