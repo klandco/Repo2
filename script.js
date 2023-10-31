@@ -2,7 +2,7 @@
 
 // set up the map center and zoom level
 var map = L.map('map', {
-  center: [50, -80],
+  center: [45, -75],
   zoom: 6, 
   zoomControl: false, 
   scrollWheelZoom: true
