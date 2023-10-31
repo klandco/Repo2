@@ -65,7 +65,7 @@ $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.coordinates); // replace with properties data label from your GeoJSON file if applicable
+      marker.bindPopup(feature.properties.PLACE_NAME); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
