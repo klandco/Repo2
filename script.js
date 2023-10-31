@@ -58,14 +58,14 @@ controlLayers.addBaseLayer(Esri_WorldImagery, 'Esri World Imagery');
 // All Project Points
 $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
   var iconStyle = L.icon({
-    iconUrl: "src/redcirle.png",
-    iconRetinaUrl: 'src/redcirle.png',
+    iconUrl: "src/circle2.png",
+    iconRetinaUrl: 'src/circle2.png',
     iconSize: [5, 5]
   });
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.coordinates); // replace with properties data label from your GeoJSON file if applicable
+      marker.bindPopup(feature.properties.Full_Path); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
