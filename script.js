@@ -58,9 +58,9 @@ controlLayers.addBaseLayer(Esri_WorldImagery, 'Esri World Imagery');
 // All Project Points
 $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
   var iconStyle = L.icon({
-    iconUrl: "src/redcircle.png",
+    iconUrl: "src/redcirle.png",
     iconRetinaUrl: 'src/redcircle.png',
-    iconSize: [0.1, 0.1]
+    iconSize: [1, 1]
   });
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
