@@ -60,7 +60,7 @@ $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
   var iconStyle = L.icon({
     iconUrl: "src/circle2.png",
     iconRetinaUrl: 'src/circle2.png',
-    iconSize: [0.5, 0.5]
+    iconSize: [2, 2]
   });
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
@@ -93,7 +93,7 @@ $.getJSON("src/Jp2gProjectPolygonsWest.geojson", function (data) {
       layer.bindPopup(feature.properties.MUN_NAME) // replace with properties data label from your GeoJSON file if applicable
     }
   });  // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'Municipalities West ThirtyOne'); 
+  controlLayers.addOverlay(geoJsonLayer, 'Municipalities West'); 
 });
 
 //Municipalities East
