@@ -69,7 +69,7 @@ $.getJSON("src/Jp2gProjectPointsNew.geojson", function (data){
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'Project Points');
+  controlLayers.addOverlay(geoJsonLayer, 'Project Pointsss');
 });
 
 
